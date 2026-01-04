@@ -1,0 +1,13 @@
+
+/* Bootstrap override */
+.hello-title {
+    color: red !important;
+}
+
+.note-li a {
+    color: red !important;
+    text-decoration: none;
+}
+.note-li a:hover {
+    text-decoration: underline;
+}

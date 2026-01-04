@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="row justify-content-center mt-4 mb-4">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                Note Details
+            </div>
+
+            <div class="card-body">
+                <h1 class="fs-5">{{ note.title }}</h1>
+                <p>{{ note.text }}</p>
+            </div>
+
+            <div class="card-footer text-end">
+                <!-- ✅ CORRECT -->
+                <a href="{% url 'notes:list' %}" class="btn btn-primary">
+                    Back to Notes
+                </a>
+
+                <!-- ✅ CORRECT -->
+                <a href="{% url 'notes:edit' note.pk %}" class="btn btn-secondary">
+                    Edit Note
+                </a>
+                <a href="{% url 'notes:delete' note.pk %}" class="btn btn-danger">
+                    Delete Note
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
